@@ -1,0 +1,47 @@
+.img-thumbnail {
+  height: 200px;
+  width: 300px;
+}
+
+.img-thumbnail img {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+}
+
+#allBlogPosts {
+  margin: 10% auto;
+  width: 75%;
+}
+
+#blogPosts {
+  margin: 40px 20px;
+}
+
+#blogPosts p{
+  white-space: pre-line;
+}
+
+#blogPost {
+  margin: 10% auto;
+  width: 75%;
+}
+
+#blogPost img, p{
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  white-space: pre-wrap;
+}
+
+#blogPost a, button{
+  margin: 5px 10px;
+  float: left;
+}
+
+.blogForm form {
+  margin: 10% auto;
+  width: 75%;
+  height: 90%;
+  margin: 100px auto;
+}

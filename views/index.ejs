@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+<div id="allBlogPosts">
+    <% blog.reverse().forEach(function(blog){ %>
+      <div id="blogPosts" class="row justify-content-center">
+        <div class="col-md-4 col-sm-12">
+          <div class="img-thumbnail rounded float-left">
+            <img src="<%= blog.image %>">
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-12">
+          <div class="h4">
+            <a href="/blog/<%= blog._id %>"> <%= blog.title %> </a>
+          </div>
+          <div>
+            <span> <%=blog.created.toDateString()%> </span>
+          </div>
+          <div class="text-justify">
+            <p>
+              <%- blog.content.substring(0, 150) %> ...
+              <span><a class="btn btn-sm btn-dark" href="/blog/<%= blog._id %>"> Read More </a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+</div>
+
+<% include ./partials/footer %>

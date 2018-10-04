@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<div id="blogPost">
+  <div>
+    <h1> <%= blog.title %> </h1>
+  </div>
+  <div class="text-center">
+    <img class="rounded" src="<%= blog.image %>">
+  </div>
+  <div>
+    <p> <%- blog.content %> </p>
+  </div>
+  <div>
+    <a class="btn btn-dark" href="/blog/<%= blog._id %>/edit">Edit Post</a>
+    <form action="/blog/<%= blog._id %>?_method=DELETE" method="POST">
+      <button class="btn btn-dark">Delete Post</button>
+    </form>
+  </div>
+</div>
+
+<% include ./partials/footer %>
