@@ -13,11 +13,11 @@
             <a href="/blog/<%= blog._id %>"> <%= blog.title %> </a>
           </div>
           <div>
-            <span> <%=blog.created.toDateString()%> </span>
+            <span> <%= blog.created.toDateString() %> </span>
           </div>
           <div class="text-justify">
             <p>
-              <%- blog.content.substring(0, 150) %> ...
+              <%- blog.content.substring(0, 125) %> ...
               <span><a class="btn btn-sm btn-dark" href="/blog/<%= blog._id %>"> Read More </a></span>
             </p>
           </div>

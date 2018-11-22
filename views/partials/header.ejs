@@ -12,12 +12,28 @@
 		<a class="navbar-brand" href="/"> Blog </a>
 		<div>
 	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item">
-	        <a class="nav-link" href="/blog"> Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="/blog/new"> New Blog </a>
-	      </li>
+				<% if (!currentUser){ %>
+					<li class="nav-item">
+						<a class="nav-link" href="/blog"> Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/register"> Sign Up </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/login"> Sign In </a>
+					</li>
+				<% } else { %>
+					<li class="nav-item"><a class="nav-link" href="/">Hello <%= currentUser.username %></a><li/>
+					<li class="nav-item">
+						<a class="nav-link" href="/blog"> Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/blog/new"> New Blog </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/logout"> Logout </a>
+					</li>
+				<% } %>
 	    </ul>
 	  </div>
 	</div>
