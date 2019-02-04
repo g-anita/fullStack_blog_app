@@ -1,11 +1,4 @@
 
 # nodejs_blog_app
 
-Created with:
-HTML/CSS/JavaScript
-Node.js
-Express
-EJS
-MongoDB
-Passport
-Bootstrap
+Full stack blog app created with: HTML/CSS/JavaScript, Bootstrap, Node.js, Express.js, MongoDB
